@@ -1,0 +1,19 @@
+{
+  "name": "lodev/php-weather",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Lodev\\PhpWeather\\": "src\\"
+    }
+  },
+  "authors": [
+    {
+      "name": "Logan",
+      "email": "lodev205@gmail.com"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^5.6"
+  }
+}

@@ -1,0 +1,31 @@
+# Composer dependencies
+/vendor/
+
+# Composer itself
+composer.phar
+
+# PHPStorm project files
+.idea/
+
+# Laravel specific
+.env
+.phpunit.result.cache
+/storage/
+bootstrap/cache/
+
+# Symfony specific
+/var/
+/vendor/
+/.env
+.phpunit.result.cache
+
+# Generic
+*.env
+*.log
+*.cache
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
