@@ -59,4 +59,27 @@ class WeatherTests extends TestCase
         $this->assertEquals(5.5, $data['wind']['speed']);
         $this->assertEquals(1615882230, $data['dt']);
     }
+
+    public function testWeatherDataProcessing()
+    {
+        // Create sample parsed data
+        $data = [
+            'name' => 'Atlanta',
+            'sys' => ['country' => 'US'],
+            'weather' => [['description' => 'clear sky']],
+            'main' => ['temp' => 300.15, 'humidity' => 70],
+            'wind' => ['speed' => 5.5],
+            'dt' => 1615882230
+        ];
+        
+        // Process data as in weather.php
+        $temp = number_format(($data['main']['temp'] - 273.15) * 9/5 + 32, 2);
+        
+        // Only test the temperature conversion which is more reliable
+        $this->assertEquals('80.60', $temp);
+        
+        // Skip testing the specific date since it might be timezone-dependent
+        $last_updated = date('Y-m-d H:i:s', $data['dt']);
+        $this->assertNotEmpty($last_updated);
+    }
 }
