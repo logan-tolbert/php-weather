@@ -13,8 +13,8 @@
     <p>Enter a city & state name to get the current weather:</p>
     <!-- TODO: Add form functionality for dynamic latitude and longitude input. -->
     <form action="api/weather.php" method="get">
-        <input type="text" name="city" placeholder="City" disabled>
-        <input type="text" name="state" placeholder="Country" disabled>
+        <input type="text" name="city" placeholder="City">
+        <input type="text" name="country" placeholder="Country">
         <div class="button-group">
             <button type="submit">Get Weather</button>
             <button type="reset">Reset</button>
