@@ -7,7 +7,11 @@ $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 $API_KEY = $_ENV['OPENWEATHERMAP_API_KEY'];
 
-// -- get lat and long by city and country writed in form
+if($_GET['city'] == "" || is_null($_GET['city']) || $_GET['country'] == "" || is_null($_GET['country']))
+{
+    die('Please, put right city and country to get weather informations');
+}
+
 $city = $_GET['city'];
 $country = $_GET['country'];
 $latLongUrl = "https://api.openweathermap.org/geo/1.0/direct?q=".$city.",".$country."&limit=1&appid=".$API_KEY;
