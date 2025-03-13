@@ -67,10 +67,16 @@ PHP Weather is a simple weather application built with PHP. This project is curr
 - [ ] Improve error handling.
 - [ ] Add unit tests.
 
-## Contributing
+
+
+## Contributors
 
 Contributions are welcome! Please open an issue or submit a pull request.
 
+* 🧪 [Rohan Doherty](https://github.com/L00137900) - Testing
+* ✨ [Luan Ramos](https://github.com/developerluanramos) - New features
+
+  
 ## License
 
 This project is licensed under the MIT License.
